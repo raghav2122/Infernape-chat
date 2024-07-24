@@ -1,4 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+.nav-area {
+    /* Add your specific styles for the navigation area */
+    /* Example: background color, padding, etc. */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.content-area {
+    /* Add your specific styles for the content area */
+    /* Example: margin, padding, etc. */
+    margin-left: 220px;
+    /* Adjust according to your layout */
+    padding: 20px;
+}
+
+.page-content {
+    /* Add specific styles for the page content */
+    /* Example: font size, line height, etc. */
+    font-size: 16px;
+    line-height: 1.5;
+}
