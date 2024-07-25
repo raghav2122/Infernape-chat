@@ -23,8 +23,7 @@ export const options: NextAuthOptions = {
         },
       },
       async authorize(credentials) {
-        // For security reasons, use hashed passwords in a real application.
-        const user = { id: '1', name: 'Raghav', password: 'password' };
+        const user = { id: '1', name: 'Raghav', password: 'pd' };
 
         // Basic authentication check
         if (
@@ -33,11 +32,9 @@ export const options: NextAuthOptions = {
         ) {
           return user;
         } else {
-          // Return null if authentication fails
           return null;
         }
       },
     }),
   ],
-  // Add additional NextAuth configurations here if needed
 };

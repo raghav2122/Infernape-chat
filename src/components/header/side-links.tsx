@@ -26,9 +26,11 @@ export const SideLinks = () => {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Features
-          </NavigationMenuLink>
+          <Link href="/features" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Features
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
@@ -38,9 +40,11 @@ export const SideLinks = () => {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <button className="bg-black text-white px-4 py-2 rounded">
-            Login
-          </button>
+          <Link href="/login" legacyBehavior passHref>
+            <button className="bg-black text-white px-4 py-2 rounded">
+              Login
+            </button>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

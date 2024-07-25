@@ -9,7 +9,7 @@ export const HeroImage = () => {
         alt="Infernape"
         width={500}
         height={500}
-        className="rounded-lg"
+        className="rounded-lg ml-6"
       />
     </div>
   );
