@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { NavBar } from '../components/nav-bar';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { HeroSection } from '@/components/hero-section';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex justify-between items-center pl-40 border-b-2 border-black">
+        <div className="flex justify-between items-center pl-5">
           <NavBar />
         </div>
-        <div className="content-area ">{children}</div>
+        <div className="content-area">
+          <HeroSection />
+        </div>
       </body>
     </html>
   );
