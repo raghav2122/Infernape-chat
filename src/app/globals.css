@@ -6,7 +6,7 @@
     /* Add your specific styles for the navigation area */
     /* Example: background color, padding, etc. */
     /* background-color: #f0f0f0; */
-    padding: 10px;
+    padding: 8px;
 }
 
 .content-area {
@@ -16,7 +16,13 @@
     padding: 20px;
 }
 
-.logo {}
+.logo {
+    margin-right: 10px;
+}
+
+.searchBox {
+    margin-left: 20px;
+}
 
 .page-content {
     /* Add specific styles for the page content */
