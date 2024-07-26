@@ -7,7 +7,6 @@ export default function HomePage() {
     <div className="page-content flex justify-start items-start">
       <div className="content-area">
         <HeroSection />
-        Hello
       </div>
     </div>
   );
