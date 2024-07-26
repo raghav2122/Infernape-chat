@@ -8,7 +8,7 @@ export const HeroSection = async () => {
   const session = await getServerSession(options);
 
   return (
-    <div className=" w-full h-screen flex pt-20 justify-center flex flex-col md:flex-row items-center md:items-start max-w-6xl p-4">
+    <div className=" w-full flex pt-20 flex flex-col md:flex-row md:items-start  p-4 pr-20">
       {/* Text Section */}
       <div className="text-center md:text-left md:w-2/3 md:pr-10">
         <h1 className="text-6xl font-bold mb-4">
@@ -22,7 +22,7 @@ export const HeroSection = async () => {
       </div>
 
       {/* Image Section */}
-      <div className="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+      <div className=" flex justify-center align-items-end md:justify-end mt-8 md:mt-0">
         <HeroImage />
       </div>
     </div>

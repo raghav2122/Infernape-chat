@@ -4,8 +4,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
 
-import github_logo from '../../public/githubLogo.png';
-
 type Credentials = {
   username: string;
   password: string;
