@@ -18,7 +18,7 @@ export const HeroSection = async () => {
           Seamless communication with our chat app. Stay connected and
           collaborate effortlessly.
         </p>
-        {!session ? <SignIn /> : <p>Sign in to get started</p>}
+        {!session ? <SignIn /> : null}
       </div>
 
       {/* Image Section */}
