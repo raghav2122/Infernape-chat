@@ -39,3 +39,4 @@ next-env.d.ts
 
 # Cloudflare specific
 # Add any specific config or generated files related to Cloudflare if applicable
+.wrangler/*
