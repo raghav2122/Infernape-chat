@@ -1,6 +1,5 @@
 'use client';
 import * as React from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
 import {
   Dialog,
   DialogTrigger,
@@ -10,30 +9,36 @@ import {
   DialogClose,
 } from '../components/floating-UI/dialog';
 
-type Credentials = {
-  username: string;
-  password: string;
-  email: string;
-};
-
 export const SignUp = () => {
   return (
     <div className="bg-black text-white px-4 py-2 rounded">
       <Dialog>
         <DialogTrigger className="cursor-pointer">SignUp</DialogTrigger>
-        <DialogContent className="bg-white p-6 rounded-lg shadow-lg max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+        <DialogContent className="relative bg-white p-6  rounded-lg shadow-lg max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
           {/* ------------------------------------------First form page------------------------------------------ */}
-
+          <DialogClose className="pl-[95%]">
+            <button className="text-black">✕</button>
+          </DialogClose>
           <DialogHeading className="text-3xl font-bold mb-6">
             Sign up
           </DialogHeading>
           <DialogDescription className="text-gray-600 mb-4">
             By continuing, you agree to our User Agreement and acknowledge that
-            you understand the Privacy Policy.{' '}
+            you understand the Privacy Policy.
           </DialogDescription>
-          <DialogDescription className="text-black mb-4">
+          <DialogDescription className="text-black mb-4 pt-8 pb-1">
+            <div className="pb-4">
+              <button className="w-full bg-black text-white px-3 py-2 rounded-lg hover:underline">
+                Continue with Google
+              </button>
+            </div>
+            <div className="flex items-center my-4">
+              <hr className="flex-grow border-t border-gray-300" />
+              <span className="mx-4 text-gray-500">or</span>
+              <hr className="flex-grow border-t border-gray-300" />
+            </div>
             <form>
-              <div>
+              <div className="pt-8">
                 <input
                   id="email"
                   placeholder="Email"
@@ -44,24 +49,43 @@ export const SignUp = () => {
             </form>
           </DialogDescription>
           <Dialog>
-            <DialogTrigger className="w-1/2 bg-black text-white px-3 py-2 rounded-lg hover:underline">
+            <DialogTrigger className="w-full bg-black text-white px-3 py-2 rounded-lg hover:underline">
               Continue
             </DialogTrigger>
-            <DialogContent className="bg-white p-6 rounded-lg shadow-lg max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
-              <DialogHeading className="text-xl font-bold mb-4">
-                My nested dialog heading
+            <DialogContent className="relative bg-white p-6 rounded-lg shadow-lg max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+              <DialogHeading className="text-3xl font-bold mb-4">
+                Create your username and password
               </DialogHeading>
               <DialogDescription className="text-gray-600 mb-4">
-                My nested dialog description
+                InfernapeChat is anonymous, so your username is what you’ll go
+                by here. Choose wisely—because once you get a name, you can’t
+                change it.
+                <form>
+                  <div className="pt-8">
+                    <input
+                      id="username"
+                      placeholder="Username"
+                      type="text"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    />
+                  </div>
+                  <div className="pb-8 pt-4">
+                    <input
+                      id="password"
+                      placeholder="Password"
+                      type="password"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <button className="w-full bg-black text-white px-3 py-2 rounded-lg hover:underline">
+                      Sign up
+                    </button>
+                  </div>
+                </form>
               </DialogDescription>
-              <DialogClose className="text-red-500 underline cursor-pointer">
-                Closefgdf
-              </DialogClose>
             </DialogContent>
           </Dialog>
-          <DialogClose className="text-red-500 underline cursor-pointer">
-            Close
-          </DialogClose>
         </DialogContent>
       </Dialog>
     </div>
