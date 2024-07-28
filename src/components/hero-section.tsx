@@ -21,7 +21,6 @@ export const HeroSection = async () => {
         </p>
         {!session ? <SignIn /> : null}
         {/* <div className="pt-4 font-bold">OR</div> */}
-        {!session ? <SignUp /> : null}
       </div>
 
       {/* Image Section */}

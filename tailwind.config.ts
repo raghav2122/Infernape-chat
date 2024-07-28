@@ -50,17 +50,6 @@ const config = {
           '"Noto Color Emoji"',
         ],
       },
-      backgroundColor: {
-        overlay: 'rgba(0, 0, 0, 0.8)',
-        dialog: 'white',
-      },
-      borderRadius: {
-        dialog: '4px',
-      },
-      spacing: {
-        'dialog-margin': '15px',
-        'dialog-padding': '15px',
-      },
     },
   },
   plugins: [require('tailwindcss-animate')],

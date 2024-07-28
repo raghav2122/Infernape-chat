@@ -6,6 +6,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '../../components/ui/navigation-menu';
+import { SignUp } from '../signUp';
 
 export const SideLinks = () => {
   return (
@@ -41,9 +42,7 @@ export const SideLinks = () => {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/login" legacyBehavior passHref>
-            <button className="bg-black text-white px-4 py-2 rounded">
-              Login
-            </button>
+            <SignUp />
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>

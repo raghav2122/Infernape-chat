@@ -144,7 +144,7 @@ export const DialogContent = React.forwardRef<
     <FloatingPortal>
       {context.open && (
         <FloatingOverlay
-          className="bg-overlay grid place-items-center"
+          className="bg-[rgba(0,0,0,0.2)] grid place-items-center"
           lockScroll
         >
           <FloatingFocusManager context={floatingContext}>
@@ -153,7 +153,7 @@ export const DialogContent = React.forwardRef<
               aria-labelledby={context.labelId}
               aria-describedby={context.descriptionId}
               {...context.getFloatingProps(props)}
-              className="bg-dialog p-dialog-padding rounded-dialog m-dialog-margin"
+              className="bg-white p-4 md:p-6 lg:p-8 xl:p-10 m-4 md:m-6 lg:m-8 xl:m-10 rounded-lg max-w-md w-full h-2/3 md:h-2/3 lg:h-2/3 xl:h-2/3"
             >
               {props.children}
             </div>
