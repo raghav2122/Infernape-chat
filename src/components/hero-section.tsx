@@ -3,6 +3,7 @@ import { HeroImage } from './body/hero-Image';
 import { getServerSession } from 'next-auth/next';
 import { options } from '../app/api/auth/[...nextauth]/options';
 import { SignIn } from './signIn';
+import { SignUp } from './signUp';
 
 export const HeroSection = async () => {
   const session = await getServerSession(options);
@@ -19,6 +20,8 @@ export const HeroSection = async () => {
           collaborate effortlessly.
         </p>
         {!session ? <SignIn /> : null}
+        {/* <div className="pt-4 font-bold">OR</div> */}
+        {!session ? <SignUp /> : null}
       </div>
 
       {/* Image Section */}
