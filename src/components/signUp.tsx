@@ -8,7 +8,7 @@ import {
   DialogHeading,
   DialogClose,
 } from '../components/floating-UI/dialog';
-
+import { PokemonRegionSelection } from './body/pokemon-region-selection';
 export const SignUp = () => {
   return (
     <div className="bg-black text-white px-4 py-2 rounded">
@@ -53,6 +53,9 @@ export const SignUp = () => {
               Continue
             </DialogTrigger>
             <DialogContent className="relative bg-white p-6 rounded-lg shadow-lg max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+              <DialogClose className="pl-[100%] pt-0">
+                <button className="text-black">✕</button>
+              </DialogClose>
               <DialogHeading className="text-3xl font-bold mb-4">
                 Create your username and password
               </DialogHeading>
@@ -77,13 +80,38 @@ export const SignUp = () => {
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg"
                     />
                   </div>
-                  <div>
-                    <button className="w-full bg-black text-white px-3 py-2 rounded-lg hover:underline">
-                      Sign up
-                    </button>
-                  </div>
                 </form>
               </DialogDescription>
+              <Dialog>
+                <DialogTrigger className="w-full bg-black text-white px-3 py-2 rounded-lg hover:underline">
+                  Continue
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogClose className="pl-[95%]">
+                    <button className="text-black">✕</button>
+                  </DialogClose>
+                  <DialogHeading className="text-3xl font-bold mb-4">
+                    About you
+                  </DialogHeading>
+                  <DialogDescription className="text-gray-600 mb-4">
+                    Let others know a bit about you. This will be shown on your
+                    profile.
+                    <form>
+                      <div className="pt-8">
+                        <input
+                          id="name"
+                          placeholder="Name"
+                          type="text"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                        />
+                      </div>
+                    </form>
+                  </DialogDescription>
+                  <div className="pb-8 pt-4">
+                    <PokemonRegionSelection />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </DialogContent>
           </Dialog>
         </DialogContent>

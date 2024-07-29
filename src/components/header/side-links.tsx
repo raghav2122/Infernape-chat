@@ -10,7 +10,7 @@ import { SignUp } from '../signUp';
 
 export const SideLinks = () => {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="z-0">
       <NavigationMenuList className="flex gap-4">
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>

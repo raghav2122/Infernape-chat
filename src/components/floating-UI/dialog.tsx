@@ -153,7 +153,7 @@ export const DialogContent = React.forwardRef<
               aria-labelledby={context.labelId}
               aria-describedby={context.descriptionId}
               {...context.getFloatingProps(props)}
-              className="bg-white p-4 md:p-6 lg:p-8 xl:p-10 m-4 md:m-6 lg:m-8 xl:m-10 rounded-lg max-w-md w-full h-2/3 md:h-2/3 lg:h-2/3 xl:h-2/3"
+              className="bg-white border-black p-4 md:p-[50px] z-20 lg:p-[50px] xl:p-[50px] m-4 md:m-6 lg:m-8 xl:m-10 rounded-[20px] max-w-[34%] w-full h-[85%] md:h-[85%] lg:h-[85%] xl:h-[85%]"
             >
               {props.children}
             </div>
