@@ -9,7 +9,7 @@ export default {
 		const db = drizzle(env.INFERNAPE_DB);
 		const { pathname } = new URL(request.url);
 
-		if (pathname === '/pokemon') {
+		if (pathname === '/api/signup') {
 			const result = await db.select().from(User).all();
 			return Response.json(result);
 		}
